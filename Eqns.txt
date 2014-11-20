@@ -1,0 +1,14 @@
+Case 1: --------------------------
+Standard
+
+x' = ax - bxy
+y' = -cy+dxy+eyz
+z' = a'z - b'zy
+
+Case 2: -------------------------
+Continuous
+
+
+x' = ax - b(x/x_c - 1)xy
+y' = -cy + d(x/x_c - 1)xy + e(2 - x/x_c)yz
+z' = a'z - b'(2 - x/x_c)yz
