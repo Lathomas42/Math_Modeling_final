@@ -12,3 +12,7 @@ Continuous
 x' = ax - b(x/x_c - 1)xy
 y' = -cy + d(x/x_c - 1)xy + e(2 - x/x_c)yz
 z' = a'z - b'(2 - x/x_c)yz
+
+Solution when x'=z'=0:
+(a'b)/(b'a)=(2x_c - x)/(x-x_c)
+
