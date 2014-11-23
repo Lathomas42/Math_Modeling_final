@@ -4,8 +4,8 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 
 
-def solveCase2(dt=1/100., t_max=10000, x_i=1.7, y_i=1.7, z_i=5,
-               x_c=1., a=1., b=1., c=1., d=1., e=1., f=3., g=1.):
+def solveCase2(dt=1/100., t_max=10000, x_i=1.7, y_i=1.7, z_i=1,
+               x_c=1., a=1., b=1., c=1., d=2., e=1., f=3., g=1.):
     t = 0.
     x = x_i
     y = y_i
@@ -24,10 +24,11 @@ def solveCase2(dt=1/100., t_max=10000, x_i=1.7, y_i=1.7, z_i=5,
         x = x + dt*dx
         y = y + dt*dy
         z = z + dt*dz
-        x_list.append(x)
-        y_list.append(y)
-        z_list.append(z)
-        c_list.append(t)
+        if int(t/dt) % 10 == 0:
+            x_list.append(x)
+            y_list.append(y)
+            z_list.append(z)
+            c_list.append(t)
         t = t+dt
     fig = plt.figure()
     ax = fig.gca(projection='3d')
